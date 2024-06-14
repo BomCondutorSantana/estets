@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek 🐸</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img id='logo' src="images/happycode1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="80" height="auto" loading="lazy">
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./cv.html" class="nav-link active">Currículo</a></li>
+                <li class="nav-item"><a href="./problem.html" class="nav-link">Problema</a></li>
+                <li class="nav-item"><a href="./solution.html" class="nav-link">Solução</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img id='imagem_principal' src="images/ogre.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 id="titulo" class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Shrek, o Ogre Verde</h1>
+                <p class="lead">Sou um profissional comprometido e apaixonado em busca de novas oportunidades para aplicar minhas habilidades. Ao longo dos anos, acumulei uma série de conquistas notáveis no campo da proteção de pântanos, resgate de princesas e gestão de equipes diversas. Estou agora em busca de um novo capítulo em minha carreira, onde posso continuar a trazer minha energia e determinação para fazer a diferença.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button id="btnOgre" type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="mudaImg('Ogre')">Ogre</button>
+                    <button id="btnHumano" type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="mudaImg('Humano')">Humano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/happycodelumiar/"><img src="./images/facebook.png" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/company/happycodept/mycompany/"><img src="./images/linkeding.png" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/happycodept/?hl=pt"><img src="./images/instagram.png" width="24" height="24"></a></li>
+        </ul>
+        </footer>
+    </div>
+    <script>
+        function mudaImg(image){
+            var imagem =  document.getElementById('imagem_principal');
+            var btnOgre = document.getElementById('btnOgre');
+            var btnHumano = document.getElementById('btnHumano');
+            var tituloH1 = document.getElementById('titulo');
+            var logoImg = document.getElementById('logo');
+            if(image == 'Ogre'){
+                imagem.src = 'images/ogre.png';
+                btnOgre.className = 'btn btn-primary btn-lg px-4 me-md-2';
+                btnHumano.className = 'btn btn-outline-secondary btn-lg px-4';
+                tituloH1.innerHTML = 'Shrek, o Ogre';
+                logo.src='images/happycode1.png';
+                logo.width="80";
+            }else if(image == 'Humano'){
+                imagem.src = 'images/humano.png';
+                btnHumano.className = 'btn btn-primary btn-lg px-4 me-md-2';
+                btnOgre.className = 'btn btn-outline-secondary btn-lg px-4';
+                tituloH1.innerHTML = 'Shrek, o Humano';
+                logo.src='images/happycode.png';
+                logo.width="40";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
